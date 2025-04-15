@@ -1,0 +1,36 @@
+.hotelDetailContainer {
+    padding: 20px;
+  }
+  
+  .hotelTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hotelImages img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+  }
+  
+  .hotelDetails {
+    margin-top: 20px;
+  }
+  
+  .hotelDescription {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hotelPrice {
+    font-size: 1.5rem;
+    color: green;
+  }
+  
+  .bookNowButton {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
