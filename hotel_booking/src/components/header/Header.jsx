@@ -44,7 +44,9 @@ const Header = ({ type }) => {
     });
   };
 
-
+  const handleSearch = () => {
+    navigate("/hotels", { state: { destination, date, options } });
+  };
 
   return (
     <div className="header">
@@ -77,11 +79,9 @@ const Header = ({ type }) => {
         </div>
         {type !== "list" && (
           <>
-            <h1 className="headerTitle">
-              Welcome to bookify
-            </h1>
+            <h1 className="headerTitle">Welcome to Bookify</h1>
             <p className="headerDesc">
-              
+              Discover amazing places to stay with unbeatable prices and great experiences.
             </p>
             <button className="headerBtn">Sign in / Register</button>
             <div className="headerSearch">
@@ -189,7 +189,7 @@ const Header = ({ type }) => {
                 )}
               </div>
               <div className="headerSearchItem">
-                <button className="headerBtn">
+                <button className="headerBtn" onClick={handleSearch}>
                   Search
                 </button>
               </div>

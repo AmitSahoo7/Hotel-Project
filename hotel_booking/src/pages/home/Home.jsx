@@ -15,7 +15,6 @@ const Home = () => {
       <Header type="home" />
       
       <div className="homeContainer">
-        <div className="homeTitle">Welcome to Bookify</div>
         <div className="homeDescription">
           Discover the best hotels and book your stay with ease.
         </div>
