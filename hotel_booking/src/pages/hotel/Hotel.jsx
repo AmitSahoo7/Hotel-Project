@@ -83,10 +83,10 @@ const Hotel = () => {
         )}
         <div className="hotelWrapper">
           <button className="bookNow">Reserve or Book Now!</button>
-          <h1 className="hotelTitle">Tower Street Apartments</h1>
+          <h1 className="hotelTitle">Four Seasons Hotel</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
-            <span>Elton St 125 New york</span>
+            <span>Elton St 125 Mumbai</span>
           </div>
           <span className="hotelDistance">
             Excellent location – 500m from center
@@ -110,7 +110,7 @@ const Hotel = () => {
             <div className="hotelDetailsTexts">
               <h1 className="hotelTitle">Stay in the heart of City</h1>
               <p className="hotelDesc">
-                Located a 5-minute walk from St. Florian's Gate in Krakow, Tower
+                Located a 5-minute walk from India's Gate in Mumbai, Tower
                 Street Apartments has accommodations with air conditioning and
                 free WiFi. The units come with hardwood floors and feature a
                 fully equipped kitchenette with a microwave, a flat-screen TV,
@@ -118,7 +118,7 @@ const Hotel = () => {
                 also offered, as well as an electric tea pot and a coffee
                 machine. Popular points of interest near the apartment include
                 Cloth Hall, Main Market Square and Town Hall Tower. The nearest
-                airport is John Paul II International Kraków–Balice, 16.1 km
+                airport is Chhatrapati Shivaji Maharaj International Airport Mumbai, 16.1 km
                 from Tower Street Apartments, and the property offers a paid
                 airport shuttle service.
               </p>
@@ -126,7 +126,7 @@ const Hotel = () => {
             <div className="hotelDetailsPrice">
               <h1>Perfect for a 9-night stay!</h1>
               <span>
-                Located in the real heart of Krakow, this property has an
+                Located in the real heart of Mumbai, this property has an
                 excellent location score of 9.8!
               </span>
               <h2>

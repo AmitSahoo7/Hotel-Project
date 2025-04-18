@@ -2,14 +2,13 @@
     width: 100vw;
     padding: 0px 0px;
     font-size: 12px;
-    border: 1px solid #003580;
-    
   }
   
   .fLists{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    padding-top: 30px;
     margin-bottom: 50px;
   }
   
@@ -29,7 +28,7 @@
     height: 30px;
     color: #ffffff;
     background-color: #003580;
-    padding: 0;
+    padding: 10px;
     cursor: pointer;
     display: flex;
     justify-content: center;

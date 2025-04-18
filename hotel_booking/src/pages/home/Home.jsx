@@ -24,11 +24,11 @@ const Home = () => {
         <h1 className="homeTitle">Some Featured Hotels</h1>
         
         <div className="featuredHotels">
-          <Link to="/hotel/1" className="hotelLink">
+          <Link to="/hotels/1" className="hotelLink">
             <FeaturedProperties />
           </Link>
           <br/>
-          <Link to="/hotel/2" className="hotelLink">
+          <Link to="/hotels/2" className="hotelLink">
             <FeaturedProperties />
           </Link>
         </div>

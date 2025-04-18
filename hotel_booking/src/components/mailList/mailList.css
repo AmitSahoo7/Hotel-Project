@@ -20,7 +20,8 @@
   }
   
   .mailInputContainer>button{
-    height: 50px;
+    height: 35px;
+    width: 100px;
     background-color: #0071c2;
     color: white;
     font-weight: 500;
