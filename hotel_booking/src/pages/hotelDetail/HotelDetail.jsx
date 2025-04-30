@@ -1,37 +1,45 @@
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
+import React from "react";
 import "./hotelDetail.css";
+
+const hotelsData = [
+  {
+    title: "The Grand Plaza",
+    image: "https://via.placeholder.com/400x200?text=Hotel+1",
+    description: "Located in the heart of the city with luxurious rooms and top amenities.",
+  },
+  {
+    title: "Sea View Resort",
+    image: "https://via.placeholder.com/400x200?text=Hotel+2",
+    description: "Enjoy the ocean breeze and a relaxing stay by the beach.",
+  },
+  {
+    title: "Mountain Escape Lodge",
+    image: "https://via.placeholder.com/400x200?text=Hotel+3",
+    description: "Surrounded by nature, this hotel offers a perfect getaway.",
+  },
+];
 
 const HotelDetail = () => {
   return (
     <div>
-      <Navbar />
-      <div className="hotelDetailContainer">
-        <h1 className="hotelTitle">Four Seasons Hotel</h1>
-        <div className="hotelImages">
-          
-        <img
-          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/449317245.jpg?k=79b59447ab944165bdbe5bcc902c6d4ddc87953d5c3d9003c0f5f96200935c9d&o=&hp=1"
-          alt=""
-          className="fpImg"
-        />
-        <img
-          src="https://www.fourseasons.com/alt/img-opt/~75.701.211,3333-0,0000-2577,3333-1933,0000/publish/content/dam/fourseasons/images/web/MUM/MUM_396_original.jpg"
-          alt=""
-          className="fpImg"
-        />
+      <nav className="navbar">
+        <h1>Bookify - Hotels</h1>
+      </nav>
+
+      <div className="container">
+        <h2>Explore Our Top Hotels</h2>
+        <div className="hotel-grid">
+          {hotelsData.map((hotel, index) => (
+            <div className="card" key={index}>
+              <img src={hotel.image} alt={hotel.title} />
+              <div className="card-body">
+                <div className="card-title">{hotel.title}</div>
+                <div className="card-text">{hotel.description}</div>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="hotelDetails">
-          <p className="hotelDescription">
-            lorem200 ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptatibus, quibusdam, voluptates, quisquam voluptatibus quibusdam
-            voluptates, quisquam voluptatibus quibusdam voluptates, quisquam
-          </p>
-          <p className="hotelPrice">Price per night: $120</p>
-        </div>
-        <button className="bookNowButton">Book Now</button>
       </div>
-      <Footer />
     </div>
   );
 };
