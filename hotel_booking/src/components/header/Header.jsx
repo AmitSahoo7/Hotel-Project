@@ -15,6 +15,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
@@ -56,10 +57,11 @@ const Header = ({ type }) => {
         }
       >
         <div className="headerList">
-          <div className="headerListItem">
+          <Link to="/hotel/:id" className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
             <span>Hotels</span>
-          </div>
+          </Link>
+ 
           <div className="headerListItem">
             <FontAwesomeIcon icon={faHouseChimney} />
             <span>Lodges</span>
@@ -81,7 +83,8 @@ const Header = ({ type }) => {
           <>
             <h1 className="headerTitle">Welcome to Bookify</h1>
             <p className="headerDesc">
-              Discover amazing places to stay with unbeatable prices and great experiences.
+              Discover amazing places to stay with unbeatable prices and great
+              experiences.
             </p>
             <button className="headerBtn">Sign in / Register</button>
             <div className="headerSearch">

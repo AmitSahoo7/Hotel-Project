@@ -25,7 +25,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ✅ Login Modal renders when showLogin is true */}
       {showLogin && (
         <Login onClose={() => setShowLogin(false)} onLogin={handleLogin} />
       )}
