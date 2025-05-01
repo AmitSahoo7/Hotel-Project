@@ -57,10 +57,9 @@ const Header = ({ type }) => {
         }
       >
         <div className="headerList">
-          <Link to="/hotel/:id" className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
             <span>Hotels</span>
-          </Link>
+          
  
           <div className="headerListItem">
             <FontAwesomeIcon icon={faHouseChimney} />
@@ -86,7 +85,7 @@ const Header = ({ type }) => {
               Discover amazing places to stay with unbeatable prices and great
               experiences.
             </p>
-            <button className="headerBtn">Sign in / Register</button>
+            
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />

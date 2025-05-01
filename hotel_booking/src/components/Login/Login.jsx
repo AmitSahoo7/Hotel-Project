@@ -9,8 +9,9 @@ const Login = ({ onClose, onLogin }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("Logging in with:", { email, password });
-    onLogin();
+    alert("Login successful!"); // Show popup message
+    onLogin(); // Notify parent component about login
+    onClose(); // Close the login modal
   };
 
   const handleSocialLogin = (provider) => {

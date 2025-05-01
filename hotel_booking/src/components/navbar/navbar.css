@@ -33,3 +33,41 @@
   color: blue;
   font: blue;
 }
+.profileMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.profileIcon {
+  font-size: 40px;
+  cursor: pointer;
+  color: #faf8f8;
+  margin-right: 50px;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.logoutButton:hover {
+  background-color: #f5f5f5;
+}
