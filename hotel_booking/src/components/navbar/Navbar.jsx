@@ -1,26 +1,30 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Login from "../Login/Login"; // ✅ Make sure this path is correct!
+import Login from "../Login/Login";
+import Register from "../register/Register"; // Import the Register component
 import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons"; // Import user icon
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false); // State for Register modal
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
 
   const handleLogin = () => {
-    setIsLoggedIn(true); // Set login status to true
-    setShowLogin(false); // Close the login modal
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false); // Set login status to false
-    setShowProfileMenu(false); // Close the profile menu
+    setIsLoggedIn(true);
+    setShowLogin(false);
   };
 
   const handleRegister = () => {
-    alert("Registered successfully!");
+    setIsLoggedIn(true); // Optionally log in the user after registration
     setShowRegister(false);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setShowProfileMenu(false);
   };
 
   return (
@@ -29,17 +33,43 @@ const Navbar = () => {
         <div className="navContainer">
           <Link to="/" className="logo">Bookify</Link>
           <div className="navItems">
-            <button className="navButton">Register</button>
-            <button className="navButton" onClick={() => setShowLogin(true)}>
-              Login
-            </button>
+            {!isLoggedIn ? (
+              <>
+                <button className="navButton" onClick={() => setShowRegister(true)}>
+                  Register
+                </button>
+                <button className="navButton" onClick={() => setShowLogin(true)}>
+                  Login
+                </button>
+              </>
+            ) : (
+              <div className="profileMenu">
+                <FontAwesomeIcon
+                  icon={faUserCircle}
+                  className="profileIcon"
+                  onClick={() => setShowProfileMenu(!showProfileMenu)}
+                />
+                {showProfileMenu && (
+                  <div className="profileDropdown">
+                    <button onClick={handleLogout} className="logoutButton">
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      {/* ✅ Login Modal renders when showLogin is true */}
+      {/* Render Login Modal */}
       {showLogin && (
         <Login onClose={() => setShowLogin(false)} onLogin={handleLogin} />
+      )}
+
+      {/* Render Register Modal */}
+      {showRegister && (
+        <Register onClose={() => setShowRegister(false)} onRegister={handleRegister} />
       )}
     </>
   );

@@ -57,26 +57,18 @@ const Header = ({ type }) => {
         }
       >
         <div className="headerList">
+          <Link to="/hotels" className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
             <span>Hotels</span>
-          
- 
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faHouseChimney} />
-            <span>Lodges</span>
-          </div>
-          <div className="headerListItem">
+          </Link>
+          <Link to="/resort" className="headerListItem">
             <FontAwesomeIcon icon={faUmbrellaBeach} />
             <span>Resorts</span>
-          </div>
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faBuilding} />
-            <span>Guest Houses</span>
-          </div>
-          <div className="headerListItem">
+          </Link>
+          <Link to="/villas" className="headerListItem">
             <FontAwesomeIcon icon={faHome} />
             <span>Villas</span>
-          </div>
+          </Link>
         </div>
         {type !== "list" && (
           <>
@@ -85,7 +77,7 @@ const Header = ({ type }) => {
               Discover amazing places to stay with unbeatable prices and great
               experiences.
             </p>
-            
+
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../../components/navbar/Navbar"; // Import the Navbar component
-import "./hotels.css";
+import Navbar from "../../components/navbar/Navbar"; 
+import "./villas.css";
 
 const Hotels = () => {
   const hotels = [
@@ -171,7 +171,7 @@ const Hotels = () => {
     <div>
       <Navbar /> {/* Add the Navbar component */}
       <div className="hotelsContainer">
-        <h1>Hotels</h1>
+        <h1>Villas</h1>
         <div className="hotelsGrid">
           {hotels.map((hotel) => (
             <div className="hotelCard" key={hotel.id}>
