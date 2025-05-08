@@ -4,6 +4,8 @@ import Header from "../../components/header/Header";
 import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+
 import {
   faCircleArrowLeft,
   faCircleArrowRight,
@@ -132,7 +134,9 @@ const Hotel = () => {
               <h2>
                 <b>$945</b> (9 nights)
               </h2>
+              <Link to="/reserve">
               <button>Reserve or Book Now!</button>
+              </Link>
             </div>
           </div>
         </div>

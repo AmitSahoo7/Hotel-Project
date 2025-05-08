@@ -83,7 +83,6 @@ const Header = ({ type }) => {
             <p className="headerDesc">
               Discover amazing places to stay with unbeatable prices and great experiences.
             </p>
-            <button className="headerBtn">Sign in / Register</button>
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
