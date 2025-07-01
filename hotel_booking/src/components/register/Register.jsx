@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "./register.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGoogle,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const Register = ({ onClose, onRegister }) => {
   const [formData, setFormData] = useState({
@@ -23,21 +20,27 @@ const Register = ({ onClose, onRegister }) => {
   const handleRegister = (e) => {
     e.preventDefault();
     console.log("Registering:", formData);
-    onRegister(); // You can use this to trigger parent-level login
+    alert("Registration successful!"); 
+    onRegister(); 
+    onClose(); 
   };
 
   const handleSocialLogin = (provider) => {
     console.log(`Signing up with ${provider}`);
+    alert(`Signing up with ${provider}`);
   };
 
   return (
     <>
       <div className="overlay active" onClick={onClose}></div>
-      <div className="login-container">
-        <div className="login-left">
-          <div className="login-logo"><span>Bookify</span></div>
-          <form className="login-form" onSubmit={handleRegister}>
-            <h2>Register</h2>
+      <div className="register-container">
+        <div className="register-left">
+          <div className="register-logo">
+            <span>Bookify</span>
+          </div>
+          <form className="register-form" onSubmit={handleRegister}>
+            <h2>Create Your Account</h2>
+            <p>Join us and start your journey today!</p>
             <input
               type="text"
               name="name"
@@ -81,14 +84,19 @@ const Register = ({ onClose, onRegister }) => {
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Password (Min. 8 characters)"
               required
               value={formData.password}
               onChange={handleChange}
             />
-            <button type="submit">REGISTER</button>
+            <button type="submit" className="register-btn">
+              Register
+            </button>
             <p className="register-text">
-              Already have an account? <a href="#" onClick={onClose}>Login</a>
+              Already have an account?{" "}
+              <a href="#" onClick={onClose}>
+                Login here
+              </a>
             </p>
             <div className="divider">or sign up with</div>
             <div className="social-login">
@@ -97,24 +105,24 @@ const Register = ({ onClose, onRegister }) => {
                 className="google-btn"
                 onClick={() => handleSocialLogin("Google")}
               >
-                <FontAwesomeIcon icon={faGoogle} />
+                <FontAwesomeIcon icon={faGoogle} /> Google
               </button>
               <button
                 type="button"
                 className="facebook-btn"
                 onClick={() => handleSocialLogin("Facebook")}
               >
-                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={faFacebook} /> Facebook
               </button>
             </div>
           </form>
         </div>
 
-        <div className="login-right">
-          <div className="login-graphic">
-            <h3>Join us and explore amazing destinations!</h3>
+        <div className="register-right">
+          <div className="register-graphic">
+            <h3>Discover new destinations and adventures!</h3>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR63VC-Exws1tqnrA1aGXhzcAQ2Kp9FWWIQlg&s"
+              src="https://www.theindia.co.in/blog/wp-content/uploads/2024/07/praveg-ghoghla-beach-resort-diu-1024x577.jpg"
               alt="Travel"
             />
           </div>

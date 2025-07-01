@@ -1,20 +1,7 @@
-
-import "./hotel.css";
-import Navbar from "../../components/navbar/Navbar";
-import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
-import Footer from "../../components/footer/Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import { Link } from "react-router-dom";
-
-import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-  faCircleXmark,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-
+import Navbar from "../../components/navbar/Navbar"; 
+import "./resort.css";
 
 const Hotels = () => {
   const hotels = [
@@ -184,7 +171,7 @@ const Hotels = () => {
     <div>
       <Navbar /> {/* Add the Navbar component */}
       <div className="hotelsContainer">
-        <h1>Hotels</h1>
+        <h1>Resorts</h1>
         <div className="hotelsGrid">
           {hotels.map((hotel) => (
             <div className="hotelCard" key={hotel.id}>
@@ -204,39 +191,6 @@ const Hotels = () => {
                   View Details
                 </Link>
               </div>
-
-            ))}
-          </div>
-          <div className="hotelDetails">
-            <div className="hotelDetailsTexts">
-              <h1 className="hotelTitle">Stay in the heart of City</h1>
-              <p className="hotelDesc">
-                Located a 5-minute walk from India's Gate in Mumbai, Tower
-                Street Apartments has accommodations with air conditioning and
-                free WiFi. The units come with hardwood floors and feature a
-                fully equipped kitchenette with a microwave, a flat-screen TV,
-                and a private bathroom with shower and a hairdryer. A fridge is
-                also offered, as well as an electric tea pot and a coffee
-                machine. Popular points of interest near the apartment include
-                Cloth Hall, Main Market Square and Town Hall Tower. The nearest
-                airport is Chhatrapati Shivaji Maharaj International Airport Mumbai, 16.1 km
-                from Tower Street Apartments, and the property offers a paid
-                airport shuttle service.
-              </p>
-            </div>
-            <div className="hotelDetailsPrice">
-              <h1>Perfect for a 9-night stay!</h1>
-              <span>
-                Located in the real heart of Mumbai, this property has an
-                excellent location score of 9.8!
-              </span>
-              <h2>
-                <b>$945</b> (9 nights)
-              </h2>
-              <Link to="/reserve">
-              <button>Reserve or Book Now!</button>
-              </Link>
-
             </div>
           ))}
         </div>

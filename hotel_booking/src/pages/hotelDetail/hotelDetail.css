@@ -1,36 +1,143 @@
+/* General container styling */
 .hotelDetailContainer {
-    padding: 20px;
-  }
-  
-  .hotelTitle {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .hotelImages img {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px;
-  }
-  
-  .hotelDetails {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.hotelHeader {
+  margin-bottom: 20px;
+}
+
+.hotelHeader h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hotelLocation {
+  font-size: 1rem;
+  color: #555;
+}
+
+.hotelHighlights {
+  font-size: 1rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.bookNowButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookNowButton:hover {
+  background-color: #0056b3;
+}
+
+/* Content layout */
+.hotelContent {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.hotelImageContainer {
+  flex: 3;
+}
+
+.hotelMainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.hotelSidebar {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.propertyHighlights h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.propertyHighlights p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hotelRating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-right: 10px;
+}
+
+.reviews {
+  font-size: 1rem;
+  color: #555;
+}
+
+.hotelPrice {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.currentPrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-right: 10px;
+}
+
+.originalPrice {
+  font-size: 1rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.hotelAdditionalImages {
     margin-top: 20px;
   }
   
-  .hotelDescription {
-    font-size: 1.2rem;
+  .hotelAdditionalImages h2 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
   
-  .hotelPrice {
-    font-size: 1.5rem;
-    color: green;
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
   }
   
-  .bookNowButton {
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
-    border: none;
+  .additionalImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .additionalImage:hover {
+    transform: scale(1.05);
   }
