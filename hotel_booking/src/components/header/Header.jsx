@@ -1,8 +1,6 @@
 import {
   faBed,
-  faHouseChimney,
   faUmbrellaBeach,
-  faBuilding,
   faHome,
   faCalendarDays,
   faPerson,
@@ -60,6 +58,14 @@ const Header = ({ type }) => {
           <Link to="/hotels" className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
             <span>Hotels</span>
+
+          </div>
+          <div className="headerListItem">
+            <FontAwesomeIcon icon={faUmbrellaBeach} />
+            <span>Resorts</span>
+          </div>
+          <div className="headerListItem">
+
           </Link>
           <Link to="/resort" className="headerListItem">
             <FontAwesomeIcon icon={faUmbrellaBeach} />
